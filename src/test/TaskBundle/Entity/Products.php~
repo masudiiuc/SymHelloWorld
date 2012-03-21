@@ -1,0 +1,53 @@
+<?php
+
+namespace test\TaskBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * test\TaskBundle\Entity\Products
+ *
+ * @ORM\Table(name="products")
+ * @ORM\Entity
+ */
+class Products
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string $name
+     *
+     * @ORM\Column(name="name", type="string", length=45, nullable=true)
+     */
+    private $name;
+
+    /**
+     * @var float $price
+     *
+     * @ORM\Column(name="price", type="float", nullable=true)
+     */
+    private $price;
+
+    /**
+     * @var text $description
+     *
+     * @ORM\Column(name="description", type="text", nullable=true)
+     */
+    private $description;
+
+    /**
+     * @var integer $quantity
+     *
+     * @ORM\Column(name="quantity", type="integer", nullable=true)
+     */
+    private $quantity;
+
+
+}
